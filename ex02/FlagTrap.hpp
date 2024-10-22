@@ -1,8 +1,6 @@
 #ifndef FLAGTRAP_HPP
 #define FLAGTRAP_HPP
 
-#include <iostream>
-#include <string>
 #include "ClapTrap.hpp"
 
 class FlagTrap : public ClapTrap
