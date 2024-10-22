@@ -1,3 +1,3 @@
 # cpp03
 
-This project is to learn inheritance in C++.
+This project is for learning inheritance in C++.
