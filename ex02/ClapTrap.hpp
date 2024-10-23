@@ -26,9 +26,9 @@ public:
 	ClapTrap &operator=(const ClapTrap &clapTrap);
 
 	std::string getName() const;
-	int getHitpoints() const;
-	int getEnergyPoints() const;
-	int getAttackDamage() const;
+	unsigned int getHitpoints() const;
+	unsigned int getEnergyPoints() const;
+	unsigned int getAttackDamage() const;
 
 	void setName(const std::string &name);
 	void setHitPoints(int hitpoints);

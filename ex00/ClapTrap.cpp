@@ -92,17 +92,17 @@ std::string ClapTrap::getName() const
 	return name_;
 }
 
-int ClapTrap::getHitpoints() const
+unsigned int ClapTrap::getHitpoints() const
 {
 	return hit_points_;
 }
 
-int ClapTrap::getEnergyPoints() const
+unsigned int ClapTrap::getEnergyPoints() const
 {
 	return energy_points_;
 }
 
-int ClapTrap::getAttackDamage() const
+unsigned int ClapTrap::getAttackDamage() const
 {
 	return attack_damage_;
 }
