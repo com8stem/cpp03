@@ -1,15 +1,15 @@
 #include "FlagTrap.hpp"
 
-FlagTrap::FlagTrap()
+FlagTrap::FlagTrap() : ClapTrap()
 {
 	std::cout << "\033[33mFlagTrap\033[0m default constructor" << std::endl;
-	setName("FlagTrap");
+	setName("default");
 	setHitPoints(100);
 	setEnergyPoints(100);
 	setAttackDamage(30);
 }
 
-FlagTrap::FlagTrap(const std::string name)
+FlagTrap::FlagTrap(const std::string name) : ClapTrap(name)
 {
 	std::cout << "\033[33mFlagTrap\033[0m constructor" << std::endl;
 	setName(name);

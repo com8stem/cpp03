@@ -12,16 +12,10 @@ int main()
 	flag_trap.takeDamage(5);
 	flag_trap.beRepaired(5);
 	flag_trap.highFivesGuys();
+	flag_trap2.attack("enemy2");
+	flag_trap2.takeDamage(100);
+	flag_trap2.beRepaired(5);
+	flag_trap2.highFivesGuys();
 
-	ScavTrap scav_trap("beta");
-	ScavTrap scav_trap2(scav_trap);
-	ScavTrap scav_trap3;
-	
-	scav_trap3 = scav_trap2;
-	scav_trap.attack("enemy2");
-	scav_trap.takeDamage(5);
-	scav_trap.beRepaired(5);
-	scav_trap.guardGate();
-	
 	return (0);
 }
