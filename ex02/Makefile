@@ -1,5 +1,5 @@
 NAME = FlagTrap
-SRCS = main.cpp ClapTrap.cpp FlagTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

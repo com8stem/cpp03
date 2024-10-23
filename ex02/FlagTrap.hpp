@@ -7,12 +7,12 @@ class FlagTrap : public ClapTrap
 {
 public:
 	FlagTrap();
-	FlagTrap(const std::string &name);
+	FlagTrap(const std::string name);
 	FlagTrap(const FlagTrap &flagTrap);
 	~FlagTrap();
 	FlagTrap &operator=(const FlagTrap &flagTrap);
 
-	void highFivesGuys();
+	void highFivesGuys() const;
 };
 
 #endif

@@ -9,7 +9,7 @@ FlagTrap::FlagTrap()
 	setAttackDamage(30);
 }
 
-FlagTrap::FlagTrap(const std::string &name)
+FlagTrap::FlagTrap(const std::string name)
 {
 	std::cout << "FlagTrap constructor" << std::endl;
 	setName(name);
@@ -38,7 +38,7 @@ FlagTrap &FlagTrap::operator=(const FlagTrap &flagTrap)
 	return (*this);
 }
 
-void FlagTrap::highFivesGuys()
+void FlagTrap::highFivesGuys() const
 {
 	std::cout << "FlagTrap " << getName() << " is requesting a high five" << std::endl;
 }
