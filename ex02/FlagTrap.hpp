@@ -12,7 +12,7 @@ public:
 	~FlagTrap();
 	FlagTrap &operator=(const FlagTrap &flagTrap);
 
-	void highFivesGuys() const;
+	void highFivesGuys();
 };
 
 #endif

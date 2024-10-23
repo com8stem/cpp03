@@ -38,7 +38,7 @@ FlagTrap &FlagTrap::operator=(const FlagTrap &flagTrap)
 	return (*this);
 }
 
-void FlagTrap::highFivesGuys() const
+void FlagTrap::highFivesGuys()
 {
 	std::cout << "FlagTrap " << getName() << " is requesting a high five" << std::endl;
 }
