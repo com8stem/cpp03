@@ -6,7 +6,7 @@ ScavTrap::ScavTrap()
 	setHitPoints(100);
 	setEnergyPoints(50);
 	setAttackDamage(20);
-	std::cout << "ScavTrap default constructor" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m default constructor" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string name)
@@ -15,17 +15,17 @@ ScavTrap::ScavTrap(const std::string name)
 	setHitPoints(100);
 	setEnergyPoints(50);
 	setAttackDamage(20);
-	std::cout << "ScavTrap name constructor" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m name constructor" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scav_trap) : ClapTrap(scav_trap)
 {
-	std::cout << "ScavTrap copy constructor" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m copy constructor" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destructor" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m destructor" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)
@@ -34,16 +34,16 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)
 	setHitPoints(scav_trap.getHitpoints());
 	setEnergyPoints(scav_trap.getEnergyPoints());
 	setAttackDamage(scav_trap.getAttackDamage());
-	std::cout << "ScavTrap assignment operator" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m assignment operator" << std::endl;
 	return (*this);
 }
 
 void ScavTrap::attack(const std::string &target)
 {
-	std::cout << "ScavTrap " << getName() << " attacks " << target << " causing " << getAttackDamage() << " points of damage!" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m " << getName() << " attacks " << target << " causing " << getAttackDamage() << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode" << std::endl;
+	std::cout << "\033[32mScavTrap\033[0m " << getName() << " is now in Gate keeper mode" << std::endl;
 }

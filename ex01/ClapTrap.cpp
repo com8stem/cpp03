@@ -2,28 +2,28 @@
 
 ClapTrap::ClapTrap() : name_("default"), hit_points_(10), energy_points_(10), attack_damage_(0)
 {
-	std::cout << "ClapTrap default constructor" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m default constructor" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string name) : name_(name), hit_points_(10), energy_points_(10), attack_damage_(0)
 {
-	std::cout << "ClapTrap constructor with name" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m constructor with name" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &clap_trap)
 {
-	std::cout << "ClapTrap copy constructor" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m copy constructor" << std::endl;
 	*this = clap_trap;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destructor" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m destructor" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap_trap)
 {
-	std::cout << "ClapTrap assignation operator" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m assignation operator" << std::endl;
 	name_ = clap_trap.name_;
 	hit_points_ = clap_trap.hit_points_;
 	energy_points_ = clap_trap.energy_points_;
@@ -35,21 +35,21 @@ void ClapTrap::attack(const std::string &target)
 {
 	if (isDead())
 	{
-		std::cout << "ClapTrap " << name_ << " is dead and cannot attack!" << std::endl;
+		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is dead and cannot attack!" << std::endl;
 		return;
 	}
 	energy_points_ -= 1;
-	std::cout << "ClapTrap " << name_ << " attacks " << target << ", causing " << attack_damage_ << " points of damage!" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m " << name_ << " attacks " << target << ", causing " << attack_damage_ << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (isDead())
 	{
-		std::cout << "ClapTrap " << name_ << " is dead!" << std::endl;
+		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is dead!" << std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << name_ << " takes " << amount << " points of damage!" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m " << name_ << " takes " << amount << " points of damage!" << std::endl;
 	hit_points_ -= amount;
 }
 
@@ -57,10 +57,10 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (isDead())
 	{
-		std::cout << "ClapTrap " << name_ << " is dead and cannot be repaired!" << std::endl;
+		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is dead and cannot be repaired!" << std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << name_ << " is repaired for " << amount << " points!" << std::endl;
+	std::cout << "\033[31mClapTrap\033[0m " << name_ << " is repaired for " << amount << " points!" << std::endl;
 	energy_points_ -= 1;
 	hit_points_ += amount;
 }
