@@ -19,7 +19,7 @@ public:
 	bool isDead() const;
 
 	ClapTrap();
-	ClapTrap(const std::string &name);
+	ClapTrap(const std::string name);
 	ClapTrap(const ClapTrap &clapTrap);
 	~ClapTrap();
 	ClapTrap &operator=(const ClapTrap &clapTrap);
