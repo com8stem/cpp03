@@ -9,10 +9,10 @@ int main()
 	clap_trap3 = clap_trap2;
 
 	clap_trap.attack("enemy1");
-	clap_trap.takeDamage(5);
+	clap_trap.takeDamage(UINT_MAX);
 	clap_trap.beRepaired(5);
-	clap_trap2.takeDamage(15);
-	clap_trap2.beRepaired(5);
+	clap_trap2.takeDamage(5);
+	clap_trap2.beRepaired(UINT_MAX);
 	clap_trap2.attack("enemy2");
 	clap_trap3.attack("enemy3");
 	clap_trap3.attack("enemy4");

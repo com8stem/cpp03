@@ -2,14 +2,15 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
+#include <limits.h>
 
 class ClapTrap
 {
 private:
 	std::string name_;
-	int hit_points_;
-	int energy_points_;
-	int attack_damage_;
+	unsigned int hit_points_;
+	unsigned int energy_points_;
+	unsigned int attack_damage_;
 
 public:
 	void attack(const std::string &target);

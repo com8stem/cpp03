@@ -38,7 +38,7 @@ void ClapTrap::attack(const std::string &target)
 		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is dead and cannot attack!" << std::endl;
 		return;
 	}
-	energy_points_ -= 1;
+	energy_points_--;
 	std::cout << "\033[31mClapTrap\033[0m " << name_ << " attacks " << target << ", causing " << attack_damage_ << " points of damage!" << std::endl;
 }
 
@@ -50,19 +50,32 @@ void ClapTrap::takeDamage(unsigned int amount)
 		return;
 	}
 	std::cout << "\033[31mClapTrap\033[0m " << name_ << " takes " << amount << " points of damage!" << std::endl;
+	if (hit_points_ < amount)
+		hit_points_ = 0;
+	else
 	hit_points_ -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
-{
+{	
+	unsigned long total;
+
+	total = static_cast<unsigned long>(hit_points_) + static_cast<unsigned long>(amount);
 	if (isDead())
 	{
 		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is dead and cannot be repaired!" << std::endl;
 		return;
 	}
+	else if (total >= UINT_MAX)
+	{
+		std::cout << "\033[31mClapTrap\033[0m " << name_ << " is fully repaired!" << std::endl;
+		hit_points_ = UINT_MAX;
+		energy_points_--;
+		return;
+	}
 	std::cout << "\033[31mClapTrap\033[0m " << name_ << " is repaired for " << amount << " points!" << std::endl;
-	energy_points_ -= 1;
 	hit_points_ += amount;
+	energy_points_--;
 }
 
 bool ClapTrap::isDead() const
